@@ -51,13 +51,13 @@ int main(int argc, char* argv[]) { // choose the commandline arguments as "white
     s >> chess;
     cout << chess; //the chessboard gets printed to the console
     chess.chess_to_file(myFile); //the chessboard gets written to myFile
-    
+
     //the logic is the same for every if block below. Each block corresponds to a choice of ai and a starting color.
 
     if (argv[1][2] == '1' and argv[2][2] == '2' and argv[3][0] == 'w') { //checks if the white player is ai1, if the black player is ai2 and if the startingcolor is white
         while (size(chess.black_pieces()) != 0 and size(chess.white_pieces()) != 0) { //checks if the program should end
             chess.Ai1(true); //ai 1 makes a move as white
-            cout << chess; 
+            cout << chess;
             chess.chess_to_file(myFile); //write to file
             if (size(chess.black_pieces()) != 0) {
                 chess.Ai2(false); //ai 2 makes a move as black
@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) { // choose the commandline arguments as "white
             cout << chess;
             chess.chess_to_file(myFile);
             if (size(chess.black_pieces()) != 0) {
-                chess.Ai1(false); 
+                chess.Ai1(false);
                 cout << chess;
                 chess.chess_to_file(myFile);
             }
@@ -88,7 +88,7 @@ int main(int argc, char* argv[]) { // choose the commandline arguments as "white
             cout << chess;
             chess.chess_to_file(myFile);
             if (size(chess.black_pieces()) != 0) {
-                chess.Ai1(false); 
+                chess.Ai1(false);
                 cout << chess;
                 chess.chess_to_file(myFile);
             }
@@ -101,7 +101,7 @@ int main(int argc, char* argv[]) { // choose the commandline arguments as "white
             cout << chess;
             chess.chess_to_file(myFile);
             if (size(chess.black_pieces()) != 0) {
-                chess.Ai2(false); 
+                chess.Ai2(false);
                 cout << chess;
                 chess.chess_to_file(myFile);
             }
@@ -127,7 +127,7 @@ int main(int argc, char* argv[]) { // choose the commandline arguments as "white
             cout << chess;
             chess.chess_to_file(myFile);
             if (size(chess.white_pieces()) != 0) {
-                chess.Ai2(true); 
+                chess.Ai2(true);
                 cout << chess;
                 chess.chess_to_file(myFile);
             }
@@ -153,7 +153,7 @@ int main(int argc, char* argv[]) { // choose the commandline arguments as "white
             cout << chess;
             chess.chess_to_file(myFile);
             if (size(chess.white_pieces()) != 0) {
-                chess.Ai2(true); 
+                chess.Ai2(true);
                 cout << chess;
                 chess.chess_to_file(myFile);
             }

@@ -7,15 +7,15 @@
 
 #include "ChessPiece.h"
 
-class Bishop : public ChessPiece {
+class Bishop :virtual public ChessPiece {
     // Override virtual methods from ChessPiece here
 public:
     using ChessPiece::ChessPiece;
-    int validMove(int to_x, int to_y);
-    string utfRepresentation();     // may be implemented as string
-    char latin1Representation();
-    vector<ChessMove> capturingMoves();
-    vector<ChessMove> nonCapturingMoves();
+    virtual int validMove(int to_x, int to_y);
+    virtual string utfRepresentation();     // may be implemented as string
+    virtual char latin1Representation();
+    virtual vector<ChessMove> capturingMoves();
+    virtual vector<ChessMove> nonCapturingMoves();
 };
 
 
